@@ -25,8 +25,8 @@ def maybe_make_a_push(city, date):
 
 def login(driver):
     driver.get(BASE.format('users/sign_in'))
-    driver.find_element(by=By.XPATH, value="//input[@id='user_email']").send_keys('jianfgo@gmail.com')
-    driver.find_element(by=By.XPATH, value="//input[@id='user_password']").send_keys('b!Pz62KQw_WFjZbpMLzr')
+    driver.find_element(by=By.XPATH, value="//input[@id='user_email']").send_keys('<email>')
+    driver.find_element(by=By.XPATH, value="//input[@id='user_password']").send_keys('<password>')
     checkbox = driver.find_element(by=By.XPATH, value="//input[@id='policy_confirmed']")
     ActionChains(driver).move_to_element(checkbox).click(checkbox).perform()
     driver.find_element(by=By.XPATH, value="//input[@type='submit']").click()
