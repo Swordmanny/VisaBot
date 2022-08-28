@@ -13,8 +13,8 @@ BASE = 'https://www.ch-edoc-reservation.admin.ch/{}'
 DT = date(2022, 10, 1)
 
 def make_a_push():
-    pb_client = PushBullet("o.F5vFyireFP69Qqpjd8pu8vhJqwLmuHHi")
-    pb_client.push_link("Reserve now", BASE.format('#/session?token=Uwpb9nCj&locale=en-US'))
+    pb_client = PushBullet("<Your api key>")
+    pb_client.push_link("Reserve now", BASE.format('#/session?token=[token]&locale=en-US'))
 
 def is_triggered(earliest):
     return earliest < DT
